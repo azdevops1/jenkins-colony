@@ -17,7 +17,7 @@ inputs:
         Open the Settings page and click the Integrations tab. Under the Jenkins
         Pipeline icon, click Connect. In the Connect Colony to your Jenkins Pipeline.
         Copy the automatically generated token.
-      default_value: vLapYf-AlE7F44ftng5TLAtO2Oqp3uCMVJM0O_jlLTY
+      default_value: 4jVBUFXbhkFqZFi-X3f5tOtzekGJ1ojMktEx0yJT160
   - SPACE_NAME:
       description: >
         Space Name where Jenkins pipeline will deploy token.

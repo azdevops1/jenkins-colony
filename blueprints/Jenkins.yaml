@@ -29,10 +29,10 @@ inputs:
         Specify password for Jenkins admin user. 
 #      default_value: admin
 
-#  - IAM_ROLE:
-#      description: >
-#        AWS IAM instance profile role name allowing Jenkins to access S3 bucket
-#      default_value: s3access-profile
+  - IAM_ROLE:
+      description: >
+        AWS IAM instance profile role name allowing Jenkins to access S3 bucket
+      default_value: s3access-profile
 
   - BUCKET_NAME:
       description: >

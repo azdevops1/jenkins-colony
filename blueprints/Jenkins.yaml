@@ -26,7 +26,7 @@ inputs:
   - JENKINS_ADMIN_PASS:
       display_style: masked
       description: >
-        Specify password for Jenkins admin user. Default value is 'admin'
+        Specify password for Jenkins admin user. 
 #      default_value: admin
 
 #  - IAM_ROLE:

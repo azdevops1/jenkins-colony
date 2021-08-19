@@ -17,7 +17,11 @@ inputs:
         Open the Settings page and click the Integrations tab. Under the Jenkins
         Pipeline icon, click Connect. In the Connect Colony to your Jenkins Pipeline.
         Copy the automatically generated token.
+      default_value: vLapYf-AlE7F44ftng5TLAtO2Oqp3uCMVJM0O_jlLTY
   - SPACE_NAME:
+      description: >
+        Space Name where Jenkins pipeline will deploy token.
+      default_value: Project-Novus
 
   - JENKINS_ADMIN_PASS:
       display_style: masked
@@ -28,20 +32,22 @@ inputs:
   - IAM_ROLE:
       description: >
         AWS IAM instance profile role name allowing Jenkins to access S3 bucket
+      default_value: s3access-profile
 
   - BUCKET_NAME:
       description: >
         This bucket will be used to store build artifacts
+      default_value: chris-aws-workshop
 
 applications:
   - jenkins:
       input_values:
         - AWS_INSTANCE_TYPE: $AWS_INSTANCE_TYPE
-        - CS_COLONY_TOKEN: $CS_COLONY_TOKEN
+#        - CS_COLONY_TOKEN: $CS_COLONY_TOKEN
         - SPACE_NAME: $SPACE_NAME
         - JENKINS_ADMIN_PASS: $JENKINS_ADMIN_PASS
-        - IAM_ROLE: $IAM_ROLE
-        - BUCKET_NAME: $BUCKET_NAME
+#        - IAM_ROLE: $IAM_ROLE
+#        - BUCKET_NAME: $BUCKET_NAME
 
 debugging:
   availability: on

@@ -3,11 +3,11 @@ kind: application
 
 inputs:
   - AWS_INSTANCE_TYPE
-#  - CS_COLONY_TOKEN
+  - CS_COLONY_TOKEN
   - SPACE_NAME
   - JENKINS_ADMIN_PASS
 #  - IAM_ROLE
-#  - BUCKET_NAME
+  - BUCKET_NAME
 
 source:
   os_type: linux
@@ -33,7 +33,7 @@ infrastructure:
           
   permissions:
       aws:
-        iam_instance_profile: $IAM_ROLE
+        iam_instance_profile: s3access-profile
 
 configuration:
   initialization:

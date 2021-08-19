@@ -6,7 +6,7 @@ inputs:
   - CS_COLONY_TOKEN
   - SPACE_NAME
   - JENKINS_ADMIN_PASS
-#  - IAM_ROLE
+  - IAM_ROLE
   - BUCKET_NAME
 
 source:
@@ -33,8 +33,7 @@ infrastructure:
           
   permissions:
       aws:
-        iam_instance_profile: s3access-profile
-
+        iam_instance_profile: $IAM_ROLE
 configuration:
   initialization:
     script: init.sh
